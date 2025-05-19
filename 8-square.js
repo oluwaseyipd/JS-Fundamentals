@@ -7,6 +7,10 @@ if (isNaN(arg1)){
 }
 else{
     for(let i=0; i < arg1; i++){
-        console.log('X'.repeat(arg1));
+        let row = '';
+        for(let j=0; j < arg1; j++){
+            row += 'X';
+        } 
+        console.log(row);
     }
 }
