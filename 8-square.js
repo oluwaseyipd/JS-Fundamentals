@@ -1,16 +1,19 @@
 #!/usr/bin/node
 
-const arg1 = parseInt(process.argv[2]);
+const size = parseInt(process.argv[2]);
 
-if (isNaN(arg1)){
-    console.log('Missing size');
-}
-else{
-    for(let i=0; i < arg1; i++){
-        let row = '';
-        for(let j=0; j < arg1; j++){
-            row += 'X';
-        } 
-        console.log(row);
+if (isNaN(size)) {
+  console.log('Missing size');
+} else {
+  let i = 0;
+  while (i < size) {
+    let row = '';
+    let j = 0;
+    while (j < size) {
+      row += 'X';
+      j++;
     }
+    console.log(row);
+    i++;
+  }
 }
